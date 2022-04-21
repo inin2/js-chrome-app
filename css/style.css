@@ -1,3 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+input,
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
 .hidden {
-	display: none;
+  display: none;
+}
+
+.container {
+  width: 500px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* background */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* clock */
+#clock {
+  /* margin-bottom: 10px; */
+  font-size: 6rem;
+}
+
+/* login */
+#login-form {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px 5px 20px;
+  border-bottom: 1px solid #fff;
+}
+
+#login-form input[type="text"] {
+  width: 100%;
+  padding-right: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* gretting */
+#greeting {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+/* todo */
+#todo-form {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: #ffffff80;
+  border-radius: 25px;
+}
+
+#todo-form input[type="text"] {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#todo-list {
+  width: 100%;
+  max-height: 270px;
+  padding: 0 50px;
+  font-size: 1.1rem;
+  list-style: none;
+  overflow-y: auto;
+}
+
+#todo-list::-webkit-scrollbar {
+  display: none;
+}
+
+#todo-list li {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+#todo-list li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+#todo-list li span {
+  flex: 1;
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* quote */
+#quote {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+#quote span:first-child {
+}
+
+#quote span:last-child {
+}
+
+/* weather */
+#weather {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+#weather > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weather img {
+  width: 60px;
+  height: 60px;
 }
